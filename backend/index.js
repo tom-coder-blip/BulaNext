@@ -8,6 +8,9 @@ import careerRoutes from './routes/career.routes.js';
 import conversationRoutes from './routes/conversation.routes.js';
 import messageRoutes from './routes/message.routes.js';
 import goalRoutes from './routes/goal.routes.js';
+import potentialMatchRoutes from './routes/potentialMatch.routes.js';
+import matchRequestRoutes from './routes/matchRequest.route.js';
+import actualMatchRoutes from './routes/actualMatches.routes.js';
 
 dotenv.config();
 
@@ -24,6 +27,9 @@ app.use('/api/careers', careerRoutes);
 app.use('/api/convos', conversationRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/goals', goalRoutes);
+app.use('/api/potential-matches', potentialMatchRoutes);
+app.use('/api/match-requests', matchRequestRoutes);
+app.use('/api/actual-matches', actualMatchRoutes);
 
 // === Database Connection and Server Start ===
 mongoose.connect(process.env.MONGO_URI)
